@@ -1,6 +1,6 @@
 ## Local Push Notification in Flutter
 
-Hello everyone, Today I'll show you how we can implement local push notification from a flutter app.
+Hello everyone, Today I'll show you how we can implement local push notification in a flutter app.
 
 ## Implementation
 
