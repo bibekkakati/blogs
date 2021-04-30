@@ -15,7 +15,7 @@ dependencies:
 ``` 
 
 
-> Check for the latest version in the package link.
+> Check for the latest version on the package's page.
 
 Add the following to your ` AndroidManifest.xml ` file:
 
