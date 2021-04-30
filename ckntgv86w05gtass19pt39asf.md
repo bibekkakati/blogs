@@ -269,4 +269,4 @@ I have personally used this local push notification in some of my apps and I mus
 
 Thank you for reading. Give it a thumbs-up if it is helpful for you.
 
-Feel free to  [connect](https://bibekkakati.me) .
+Feel free to  [connect](https://bibekkakati.me) 👋
