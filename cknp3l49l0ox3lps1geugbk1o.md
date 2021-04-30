@@ -20,4 +20,8 @@ class ClassName {
 ``` 
 Factory constructors return an instance of the class, but it doesn't necessarily create a new instance.
 
+Thank you for reading. Give it a thumbs-up if it is helpful for you.
+
+Feel free to  [connect](https://bibekkakati.me) 👋
+
 
