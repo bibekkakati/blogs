@@ -107,5 +107,5 @@ await _localStorage.deleteAll();
 
 - Its return type is void.
 
-[Connect](https://bibekkakati.me)
+Feel free to [Connect](https://bibekkakati.me) 👋
 
