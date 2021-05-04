@@ -18,7 +18,7 @@ It uses the browser's GPU to run all the calculations. Getting started with the 
 
 Just include the package link in your project and you are good to go.
 
-```
+```html
 <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
 ```
 
@@ -39,7 +39,7 @@ We will create a webpage where user can upload an image or paste an image link, 
 
 ### Prerequisite
 
-```
+```json
 - HTML
 - CSS
 - Javascript
@@ -59,27 +59,186 @@ On uploading or pasting a link of an image, the image will get rendered on the s
 
 ### HTML
 
+```html
+<!DOCTYPE html>
+<html lang="en">
 
-![html-file.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1620152207552/ZMCHVRwF0.png)
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Classifier</title>
+  <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body onload="main()">
+  <div class="loader-view" id="loaderView">
+    <h3>Initializing ...</h3>
+  </div>
+  <div class="main" id="mainView">
+    <h1 class="heading">Image Classifier</h1>
+    <div class="select-image">
+      <input type="file" name="Image" id="selectImage" accept="jpg,jpeg,png" hidden>
+      <button class="upload-button button" id="uploadButton">Upload Image</button>
+      <button class="link-button button" id="linkButton">Paste Link</button>
+    </div>
+    <div class="image-view" id="imageViewContainer">
+      <img src="" alt="" class="image" id="imageView" crossorigin="anonymous">
+
+      <button class="button" id="classifyButton">What is in the image ?</button>
+      <h2 class="result" id="result"></h2>
+    </div>
+
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
+```
 
 ### CSS
 
 Just some styling for our webpage.
 
+```CSS
+body {
+	background-color: #000;
+	color: #f0f8ff;
+}
 
-![css-file.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1620152470414/sUlm_-3ON.png)
+.main,
+.loader-view {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+}
 
+.main {
+	display: none;
+}
+
+.button {
+	border: none;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 10px 15px;
+	border-radius: 8px;
+}
+
+.upload-button {
+	color: #f0f8ff;
+	background: #ff7b00;
+}
+
+.link-button {
+	color: #1f1f1f;
+	background: #fdf8f4;
+}
+
+.upload-button:hover {
+	background: #f0f8ff;
+	color: #ff7b00;
+}
+
+.link-button:hover {
+	color: #ff7b00;
+}
+
+.image-view {
+	margin-top: 50px;
+	width: 50vw;
+	height: 60vh;
+	display: none;
+	flex-direction: column;
+}
+
+.image {
+	max-width: 100%;
+	max-height: 100%;
+	border: solid #f0f8ff 6px;
+	border-radius: 4px;
+	margin-bottom: 5px;
+}
+
+.result {
+	text-transform: capitalize;
+	letter-spacing: 0.5px;
+}
+```
 
 ### Javascript
 
 Calling the `main` function from `index.html` when body loads.
 
+```javascript
+function main() {
+	const classifier = ml5.imageClassifier("MobileNet", modelLoaded);
+	const uploadButton = document.getElementById("uploadButton");
+	const linkButton = document.getElementById("linkButton");
+	const classifyButton = document.getElementById("classifyButton");
+	const selectImage = document.getElementById("selectImage");
+	const imageViewContainer = document.getElementById("imageViewContainer");
+	const imageView = document.getElementById("imageView");
+	const result = document.getElementById("result");
+	const loaderView = document.getElementById("loaderView");
+	const mainView = document.getElementById("mainView");
 
-![script-file.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1620152337360/f4Jk2whQl.png)
+	uploadButton.onclick = function (e) {
+		selectImage.click();
+	};
+
+	classifyButton.onclick = function (e) {
+		classify(imageView);
+	};
+
+	linkButton.onclick = function (e) {
+		const link = prompt("Paste Image Link Here");
+		if (link != null && link != undefined) {
+			imageView.src = link;
+			imageViewContainer.style.display = "flex";
+			result.innerText = "";
+		}
+	};
+
+	selectImage.onchange = function () {
+		if (this.files && this.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				imageView.src = e.target.result;
+				imageViewContainer.style.display = "flex";
+				result.innerText = "";
+			};
+			reader.readAsDataURL(this.files[0]);
+		}
+	};
+
+	function modelLoaded() {
+		loaderView.style.display = "none";
+		mainView.style.display = "flex";
+	}
+
+	function classify(img) {
+		classifier.predict(img, function (err, results) {
+			if (err) {
+				return alert(err);
+			} else {
+				result.innerText = results[0].label;
+			}
+		});
+	}
+}
+
+```
 
 ### Javascript Explanation
 
-```
+```javascript
 const classifier = ml5.imageClassifier("MobileNet", modelLoaded);
 ```
 `ml5.imageClassifier` method is called to initialize the machine learning model.
@@ -95,65 +254,65 @@ We have some other choices too for the `model` like:
 
 Then we are getting some references to buttons and views of our HTML file to listen for events and manipulate content and CSS styling.
 
-```
+```javascript
 uploadButton.onclick = function (e) {
-		selectImage.click();
-	};
+	selectImage.click();
+};
 ```
 On clicking the `Upload Image` button, it will click the image selector input element `selectImage`.
 
-```
-	selectImage.onchange = function () {
-		if (this.files && this.files[0]) {
-			var reader = new FileReader();
-			reader.onload = function (e) {
-				imageView.src = e.target.result;
-				imageViewContainer.style.display = "flex";
-				result.innerText = "";
-			};
-			reader.readAsDataURL(this.files[0]);
-		}
-	};
+```javascript
+selectImage.onchange = function () {
+	if (this.files && this.files[0]) {
+		var reader = new FileReader();
+		reader.onload = function (e) {
+			imageView.src = e.target.result;
+			imageViewContainer.style.display = "flex";
+			result.innerText = "";
+		};
+		reader.readAsDataURL(this.files[0]);
+	}
+};
 ```
 When the user selects the image, `selectImage.onchange` listener will get invoked and it will set the image in `imageView` src.
 
-```
+```javascript
 linkButton.onclick = function (e) {
-		const link = prompt("Paste Image Link Here");
-		if (link != null && link != undefined) {
-			imageView.src = link;
-			imageViewContainer.style.display = "flex";
-			result.innerText = "";
-		}
-	};
+	const link = prompt("Paste Image Link Here");
+	if (link != null && link != undefined) {
+		imageView.src = link;
+		imageViewContainer.style.display = "flex";
+		result.innerText = "";
+	}
+};
 ```
 On clicking the `Paste Link` button, `linkButton.onclick` listener will get invoked and it will ask the user for the <strong>image link</strong> and if a link is provided, it will set the link in the `imageView` src.
 
-```
+```javascript
 classifyButton.onclick = function (e) {
-		classify(imageView);
-	};
+	classify(imageView);
+};
 ```
 On clicking the `What is in the image?` button, `classifyButton.onclick` listener will get invoked and it will call the `classify` method, which is responsible for image classification. Will pass the image element reference i.e, `imageView` to the `classify` method.
 
-```
+```javascript
 function modelLoaded() {
-		loaderView.style.display = "none";
-		mainView.style.display = "flex";
-	}
+	loaderView.style.display = "none";
+	mainView.style.display = "flex";
+}
 ```
 This method will get invoked when our model is initialized and it is manipulating some CSS style to hide the loader.
 
-```
+```javascript
 function classify(img) {
-		classifier.predict(img, function (err, results) {
-			if (err) {
-				return alert(err);
-			} else {
-				result.innerText = results[0].label;
-			}
-		});
-	}
+	classifier.predict(img, function (err, results) {
+		if (err) {
+			return alert(err);
+		} else {
+			result.innerText = results[0].label;
+		}
+	});
+}
 ```
 This method is the important method that is calling the `predict` method of `classifier` object. The `predict` method expects two arguments:
 - `input` which is a reference to the image element
