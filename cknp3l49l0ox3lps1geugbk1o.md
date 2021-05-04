@@ -5,7 +5,7 @@ Singleton pattern is a design pattern that allows us to use a single instance of
 
 ## Implementation
 
-```
+```dart
 class ClassName {
     static ClassName _className;
 
