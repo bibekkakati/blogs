@@ -14,7 +14,7 @@ We will use a flutter plugin called  [flutter_secure_storage](https://pub.dev/pa
 
 Add the following to your ` pubspec.yaml ` file:
 
-```
+```yaml
 dependencies:
   ...
   flutter_secure_storage: ^4.2.0
@@ -26,7 +26,7 @@ dependencies:
 
 In `[project]/android/app/build.gradle` set `minSdkVersion` to >= 18.
 
-```
+```gradle
 android {
   ...
   defaultConfig {
@@ -41,7 +41,7 @@ android {
 Import `flutter_secure_storage` in your file and create an instance of it.
 
 
-```
+```dart
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 FlutterSecureStorage _localStorage = new FlutterSecureStorage();
@@ -52,7 +52,7 @@ FlutterSecureStorage _localStorage = new FlutterSecureStorage();
 To insert a key-value pair in the storage, we will use the `write` method.
 We need to pass `key` and `value` to this method.
 
-```
+```dart
 await _localStorage.write(key: key, value: value);
 ``` 
 
@@ -66,7 +66,7 @@ await _localStorage.write(key: key, value: value);
 To read a `value` for a particular `key`, we will use the `read` method.
 We need to pass the `key` to this method.
 
-```
+```dart
 await _localStorage.read(key: key);
 ``` 
 
@@ -79,7 +79,7 @@ await _localStorage.read(key: key);
 
 To read all the values, we will use the `readAll` method.
 
-```
+```dart
 await _localStorage.readAll();
 ``` 
 
@@ -90,7 +90,7 @@ await _localStorage.readAll();
 To delete an entry, we will use the `delete` method.
 We need to pass the `key` to this method.
 
-```
+```dart
 await _localStorage.delete(key: key);
 ``` 
 
@@ -101,7 +101,7 @@ await _localStorage.delete(key: key);
 
 To delete all entries, we will use the `deleteAll` method.
 
-```
+```dart
 await _localStorage.deleteAll();
 ``` 
 
