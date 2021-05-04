@@ -36,11 +36,6 @@ Image Classification is a computer vision technique in which we classify images 
 
 We will create a webpage where user can upload an image or paste an image link, and our classifier will classify what type of object is in the image.
 
-You can find the files here: [Github Repo](https://github.com/bibekkakati/blogs-projects/tree/main/javascript/ml5js/image-classification)
-
-### Demo
-
-![imgclassifier.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1620125382401/2jEHOhudK.png)
 
 ### Prerequisite
 
@@ -327,6 +322,13 @@ This method is the important method that is calling the `predict` method of `cla
 On error, we are throwing it in an alert box.
 
 Accessing the result from the `results` array, which contains multiple objects with `label` and `confidence` level. 
+
+
+### Result
+
+![imgclassifier.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1620125382401/2jEHOhudK.png)
+
+You can find the files here: [Github Repo](https://github.com/bibekkakati/blogs-projects/tree/main/javascript/ml5js/image-classification)
 
 ---
 
