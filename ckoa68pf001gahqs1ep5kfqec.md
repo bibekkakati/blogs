@@ -59,183 +59,23 @@ On uploading or pasting a link of an image, the image will get rendered on the s
 
 ### HTML
 
-```
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Classifier</title>
-    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
-    <link rel="stylesheet" href="./style.css">
-</head>
-
-<body onload="main()">
-    <div class="loader-view" id="loaderView">
-        <h3>Initializing ...</h3>
-    </div>
-    <div class="main" id="mainView">
-        <h1 class="heading">Image Classifier</h1>
-        <div class="select-image">
-            <input type="file" name="Image" id="selectImage" accept="jpg,jpeg,png" hidden>
-            <button class="upload-button button" id="uploadButton">Upload Image</button>
-            <button class="link-button button" id="linkButton">Paste Link</button>
-        </div>
-        <div class="image-view" id="imageViewContainer">
-            <img src="" alt="" class="image" id="imageView" crossorigin="anonymous">
-
-            <button class="button" id="classifyButton">What is in the image ?</button>
-            <h2 class="result" id="result"></h2>
-        </div>
-
-    </div>
-
-    <script src="./script.js"></script>
-</body>
-
-</html>
-```
+![html-file.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1620152207552/ZMCHVRwF0.png)
 
 ### CSS
 
 Just some styling for our webpage.
 
-```
-body {
-	background-color: #000;
-	color: #f0f8ff;
-}
 
-.main,
-.loader-view {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	height: 100%;
-	width: 100%;
-}
+![css-file.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1620152470414/sUlm_-3ON.png)
 
-.main {
-	display: none;
-}
-
-.button {
-	border: none;
-	font-size: 16px;
-	font-weight: 600;
-	padding: 10px 15px;
-	border-radius: 8px;
-}
-
-.upload-button {
-	color: #f0f8ff;
-	background: #ff7b00;
-}
-
-.link-button {
-	color: #1f1f1f;
-	background: #fdf8f4;
-}
-
-.upload-button:hover {
-	background: #f0f8ff;
-	color: #ff7b00;
-}
-
-.link-button:hover {
-	color: #ff7b00;
-}
-
-.image-view {
-	margin-top: 50px;
-	width: 50vw;
-	height: 60vh;
-	display: none;
-	flex-direction: column;
-}
-
-.image {
-	max-width: 100%;
-	max-height: 100%;
-	border: solid #f0f8ff 6px;
-	border-radius: 4px;
-	margin-bottom: 5px;
-}
-
-.result {
-	text-transform: capitalize;
-	letter-spacing: 0.5px;
-}
-
-```
 
 ### Javascript
 
 Calling the `main` function from `index.html` when body loads.
 
-```
-function main() {
-	const classifier = ml5.imageClassifier("MobileNet", modelLoaded);
 
-	const uploadButton = document.getElementById("uploadButton");
-	const linkButton = document.getElementById("linkButton");
-	const classifyButton = document.getElementById("classifyButton");
-	const selectImage = document.getElementById("selectImage");
-	const imageViewContainer = document.getElementById("imageViewContainer");
-	const imageView = document.getElementById("imageView");
-	const result = document.getElementById("result");
-	const loaderView = document.getElementById("loaderView");
-	const mainView = document.getElementById("mainView");
-
-	uploadButton.onclick = function (e) {
-		selectImage.click();
-	};
-
-	classifyButton.onclick = function (e) {
-		classify(imageView);
-	};
-
-	linkButton.onclick = function (e) {
-		const link = prompt("Paste Image Link Here");
-		if (link != null && link != undefined) {
-			imageView.src = link;
-			imageViewContainer.style.display = "flex";
-			result.innerText = "";
-		}
-	};
-
-	selectImage.onchange = function () {
-		if (this.files && this.files[0]) {
-			var reader = new FileReader();
-			reader.onload = function (e) {
-				imageView.src = e.target.result;
-				imageViewContainer.style.display = "flex";
-				result.innerText = "";
-			};
-			reader.readAsDataURL(this.files[0]);
-		}
-	};
-
-	function modelLoaded() {
-		loaderView.style.display = "none";
-		mainView.style.display = "flex";
-	}
-
-	function classify(img) {
-		classifier.predict(img, function (err, results) {
-			if (err) {
-				return alert(err);
-			} else {
-				result.innerText = results[0].label;
-			}
-		});
-	}
-}
-```
+![script-file.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1620152337360/f4Jk2whQl.png)
 
 ### Javascript Explanation
 
