@@ -8,18 +8,18 @@ We will use a package called  [flutter_local_notifications](https://pub.dev/pack
 
 Add the following to your ` pubspec.yaml ` file:
 
-```
+```yaml
 dependencies:
   ....
   flutter_local_notifications: ^5.0.0+1
 ``` 
 
 
-> Check for the latest version on the package's page.
+> Check for the latest version in the package link.
 
 Add the following to your ` AndroidManifest.xml ` file:
 
-```
+```xml
 <uses-permission 
   android:name="android.permission.VIBRATE" />
 <uses-permission 
@@ -35,7 +35,7 @@ Create a file named as ` LocalNotificationHelper.dart `.
 Will do everything inside a class named ` LocalNotificationHelper ` and don't forget to import our ` flutter_local_notifications ` plugin.
 
 
-```
+```dart
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class LocalNotificationHelper {
@@ -59,7 +59,7 @@ class LocalNotificationHelper {
 
 Now we will implement ` onSelectNotification` and ` onDidReceiveLocalNotification ` method that will get invoked on pressing the notification on ` Android ` and ` iOS ` respectively.
 
-```
+```dart
 ....
 class LocalNotificationHelper {
   ....
@@ -76,7 +76,7 @@ class LocalNotificationHelper {
 
 Sometimes we want to decouple these helper files from our UI and functionality, in that case, you can set these ` onSelectNotification` and ` onDidReceiveLocalNotification ` methods from outside by passing them as an argument to another method of this helper class like this:
 
-```
+```dart
 ....
 class LocalNotificationHelper {
   ....
@@ -97,7 +97,7 @@ class LocalNotificationHelper {
 We will now initialize our notification settings.
 Let's create a ` _initialize ` method inside our class.
 
-```
+```dart
 ....
 class LocalNotificationHelper {
   ....
@@ -117,6 +117,7 @@ class LocalNotificationHelper {
   }
 }
 ``` 
+
 ` AndroidInitializationSettings ` and ` IOSInitializationSettings ` are initializing the settings for ` Android ` and ` iOS ` platform respectively.
 
 We can also pass the path of the default notification icon in ` AndroidInitializationSettings `.
@@ -125,7 +126,7 @@ We can also pass the path of the default notification icon in ` AndroidInitializ
 
 Let's create a ` showNotification ` method, which will pop a notification.  You can call this method from anywhere to create a push notification.
 
-```
+```dart
 ....
 class LocalNotificationHelper {
   ....
@@ -159,7 +160,7 @@ class LocalNotificationHelper {
 
 Let's create a ` scheduleNotification ` method, which will schedule the notification to pop at a specific time.  You can call this method from anywhere to schedule a push notification.
 
-```
+```dart
 ....
 class LocalNotificationHelper {
   ....
@@ -191,7 +192,7 @@ class LocalNotificationHelper {
 
 Let's create a ` cancelNotification ` method, which will cancel the scheduled notification. 
 
-```
+```dart
 ....
 class LocalNotificationHelper {
   ....
@@ -206,7 +207,7 @@ class LocalNotificationHelper {
 
 Let's create a ` cancelAllNotification ` method, which will cancel all the scheduled notifications. 
 
-```
+```dart
 ....
 class LocalNotificationHelper {
   ....
@@ -221,7 +222,7 @@ class LocalNotificationHelper {
 
 Let's create a ` repeatNotification ` method, which will push the notification at an interval of time. 
 
-```
+```dart
 ....
 class LocalNotificationHelper {
   ....
@@ -252,7 +253,7 @@ class LocalNotificationHelper {
 
 Let's create a ` getPendingNotifications ` method, which will retrieve all the pending notifications. 
 
-```
+```dart
 ....
 class LocalNotificationHelper {
   ....
