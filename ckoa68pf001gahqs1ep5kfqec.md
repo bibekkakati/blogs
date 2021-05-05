@@ -331,7 +331,7 @@ You can find the files here: [Github Repo](https://github.com/bibekkakati/blogs-
 
 ---
 
-<strong>Enjoyed?</strong> Give it a thumbs-up.
+Enjoyed? Give it a thumbs-up 👍
 
 Thank you for reading | Feel free to [connect](https://bibekkakati.me) 👋
 
