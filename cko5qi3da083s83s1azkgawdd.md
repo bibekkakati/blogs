@@ -128,7 +128,7 @@ main();
 As you can see, first we call the instance of the `Username` class from the `Singleton` object and assigning it to variable `instanceOne`.
 Then we set the `username` from `instanceOne`.
 
-Again, we call the instance of `Username` class from `Singleton` object and this time we are assigning it to another variable `instanceTwo`. And in the output, we can see that the value of `username` is the same as we set it through `instanceOne`.
+Again, we call the instance of `Username` class from the `Singleton` object and this time we are assigning it to another variable `instanceTwo`. And in the output, we can see that the value of `username` is the same as we set it through `instanceOne`.
 
 When we compared if both instances are equal, it returns true.
 
@@ -141,5 +141,3 @@ Github Repo [Link](https://github.com/bibekkakati/blogs-projects/tree/main/javas
 Thank you for reading. Give it a thumbs-up if it is helpful for you.
 
 Feel free to [connect](https://bibekkakati.me) 👋
-
-<a href="https://www.buymeacoffee.com/bibekkakati" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
