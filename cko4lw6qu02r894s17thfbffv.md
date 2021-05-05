@@ -111,5 +111,3 @@ Thank you for reading. Give it a thumbs-up if it is helpful for you.
 
 Feel free to  [connect](https://bibekkakati.me) 👋
 
-<a href="https://www.buymeacoffee.com/bibekkakati" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-
