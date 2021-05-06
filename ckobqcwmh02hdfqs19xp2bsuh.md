@@ -78,6 +78,8 @@ window.navigator.vibrate([
 ]);
 ```
 
+Sample Code: [Github Repo](https://github.com/bibekkakati/blogs-projects/tree/main/web/vibration-api)
+
 ---
 
 Enjoyed? Give it a thumbs-up 👍
