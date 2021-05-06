@@ -80,6 +80,8 @@ window.navigator.vibrate([
 
 Sample Code: [Github Repo](https://github.com/bibekkakati/blogs-projects/tree/main/web/vibration-api)
 
+[Live Test](https://bibekkakati.github.io/blogs-projects/web/vibration-api/index.html)
+
 ---
 
 Enjoyed? Give it a thumbs-up 👍
