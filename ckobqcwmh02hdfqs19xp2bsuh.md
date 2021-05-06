@@ -78,7 +78,7 @@ window.navigator.vibrate([
 ]);
 ```
 
-[Sample Code](https://github.com/bibekkakati/blogs-projects/tree/main/web/vibration-api) | [Live](https://bibekkakati.github.io/blogs-projects/web/vibration-api/index.html)
+[Sample Code](https://github.com/bibekkakati/blogs-projects/tree/main/web/vibration-api) | [Live Link](https://bibekkakati.github.io/blogs-projects/web/vibration-api/index.html)
 
 ---
 
