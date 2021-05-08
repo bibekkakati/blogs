@@ -34,6 +34,8 @@ We will understand the implementation with a basic example. The parent script wi
 
 Worker object and worker script have some event listeners with the help of which we can communicate and handle errors.
 
+![web-workers.jpg](https://cdn.hashnode.com/res/hashnode/image/upload/v1620481761784/zxweX_-T2J.jpeg)
+
 ### Parent Script
 
 This javascript file will be running in the main thread.
