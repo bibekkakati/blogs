@@ -1,4 +1,4 @@
-## How To Use Vibration API in Your Website
+## How To Use Vibration API In Your Website
 
 Hello everyone 👋
 
