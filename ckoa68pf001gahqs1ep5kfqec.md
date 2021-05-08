@@ -327,9 +327,9 @@ Accessing the result from the `results` array, which contains multiple objects w
 
 ![imgclassifier.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1620125382401/2jEHOhudK.png)
 
-You can find the files here: [Github Repo](https://github.com/bibekkakati/blogs-projects/tree/main/javascript/ml5js/image-classification)
+You can find the files here: [GitHub Repo](https://github.com/bibekkakati/blogs-projects/tree/main/web/image-classification)
 
-Try it out: [Live Link](https://bibekkakati.github.io/blogs-projects/javascript/ml5js/image-classification/index.html)
+Try it out: [Live Link](https://bibekkakati.github.io/blogs-projects/web/image-classification/index.html)
 
 ---
 
