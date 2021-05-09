@@ -65,7 +65,7 @@ Try it out here: [Live](https://bibekkakati.github.io/qr-gen/).
 
 ![Demo Image](https://cdn.hashnode.com/res/hashnode/image/upload/v1620586396838/PuSFQynUo.jpeg)
 
-*Screenshot taken from Google Lens while scanning*
+*Screenshot taken from Google Lens while scanning.*
 
 ---
 
