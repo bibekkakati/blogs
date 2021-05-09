@@ -1,6 +1,6 @@
 ## Generate QR Code In Javascript
 
-Hello everyone 👋, this is going to be a very short article where I will show how can we generate a QR Code for any type of content
+Hello everyone 👋, this is going to be a very short article where I will show how can we generate a QR Code for any content in JavaScript.
 
 Obviously, I am not going to implement everything from scratch and why should one do that when we have a plethora of useful libraries in JavaScript.
 
@@ -62,6 +62,10 @@ QR_CODE.makeCode("https://blog.bibekkakati.me");
 Check out the GitHub [Repo](https://github.com/bibekkakati/qr-gen).
 
 Try it out here: [Live](https://bibekkakati.github.io/qr-gen/).
+
+![Demo Image](https://cdn.hashnode.com/res/hashnode/image/upload/v1620586396838/PuSFQynUo.jpeg)
+
+*Screenshot taken from Google Lens while scanning*
 
 ---
 
