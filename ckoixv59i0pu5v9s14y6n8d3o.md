@@ -56,7 +56,7 @@ And that's it, we captured the screenshot of our HTML element.
 
 This library has some issues, some of them are mentioned in the [docs](https://github.com/niklasvh/html2canvas). I recommend going through it and understand it before using it in any production-based environment.
 
-> If you know any way to achieve a similar kind of result, please feel free to share.
+> If you are aware of any other way to achieve a similar kind of result, please feel free to share.
 
 ### Example
 
