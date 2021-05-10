@@ -8,7 +8,7 @@ So in this article, I will show how can we capture a screenshot of a web page or
 
 ### Implementation
 
-- Download the minified js file: [html2canvas](https://html2canvas.hertzen.com/dist/html2canvas.min.js)
+- Download the javascript file: [html2canvas](https://html2canvas.hertzen.com)
 
 ### Code
 
@@ -46,7 +46,7 @@ In the `configuration object`, we are using
 
 > You can find the available configuration options [here](https://html2canvas.hertzen.com/configuration).
 
-Then we are converting the returned `canvas` into a base64 image URL using `toDataUrl` method which expects two arguments
+Then we are converting the returned `canvas` into a base64 image URL using the `toDataUrl` method which expects two arguments
 - `type` : image format.
 - `encodingOptions` : number between 0 and 1 indicating the image quality.
 
@@ -55,6 +55,8 @@ And that's it, we captured the screenshot of our HTML element.
 ### Important
 
 This library has some issues, some of them are mentioned in the [docs](https://github.com/niklasvh/html2canvas). I recommend going through it and understand it before using it in any production-based environment.
+
+> If you know any way to achieve a similar kind of result, please feel free to share.
 
 ### Example
 
