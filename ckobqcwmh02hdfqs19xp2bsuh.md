@@ -78,6 +78,8 @@ window.navigator.vibrate([
 ]);
 ```
 
+*`Working only on Chrome Android.`*
+
 [Sample Code](https://github.com/bibekkakati/blogs-projects/tree/main/web/vibration-api) | [Live Link](https://bibekkakati.github.io/blogs-projects/web/vibration-api/index.html)
 
 ---
