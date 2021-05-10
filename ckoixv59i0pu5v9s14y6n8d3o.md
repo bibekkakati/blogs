@@ -4,7 +4,7 @@ Hello everyone 👋
 
 A few months back, I was working on a web-based project where a feature was required that is to take a screenshot of an HTML div in the browser and show it to the user. I was like, *sorry this is not possible*. Then I did some research and got to know about this library called [html2canvas](https://html2canvas.hertzen.com/).
 
-So in this article, I will show you how can we capture a screenshot of a web page or any element of it using `html2canvas`.
+So in this article, I will show how can we capture a screenshot of a web page or any element of it using `html2canvas`.
 
 ### Implementation
 
@@ -40,15 +40,27 @@ The `html2canvas` method takes two arguments
 - first is the HTML element whose screenshot you want.
 - second is a configuration object.
 
-In `configuration object` we are using
+In the `configuration object`, we are using
 - `allowTaint` to allow cross-origin images to taint the canvas.
 - `useCORS` to attempt to load images from a server using CORS.
 
-You can find the available configuration options [here](https://html2canvas.hertzen.com/configuration)
+> You can find the available configuration options [here](https://html2canvas.hertzen.com/configuration).
 
-Converting the returned `canvas` into a base64 image URL using `toDataUrl` method which expects two arguments
+Then we are converting the returned `canvas` into a base64 image URL using `toDataUrl` method which expects two arguments
 - `type` : image format.
 - `encodingOptions` : number between 0 and 1 indicating the image quality.
+
+And that's it, we captured the screenshot of our HTML element.
+
+### Important
+
+This library has some issues, some of them are mentioned in the [docs](https://github.com/niklasvh/html2canvas). I recommend going through it and understand it before using it in any production-based environment.
+
+### Example
+
+Check out the GitHub [Repo](https://github.com/bibekkakati/blogs-projects/tree/main/web/html-screenshot).
+
+Try it out here: [Live](https://bibekkakati.github.io/blogs-projects/web/html-screenshot/).
 
 ---
 
