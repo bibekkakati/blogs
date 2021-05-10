@@ -6,10 +6,6 @@ Obviously, I am not going to implement everything from scratch and why should on
 
 I came across this awesome lightweight library or you can say a simple script [qrcodejs](https://github.com/davidshimjs/qrcodejs). It is very easy to use and is reliable too.
 
-
-
-
-
 ### Implementation
 
 - Download this zip file: [qrcodejs](https://github.com/davidshimjs/qrcodejs/zipball/master)
@@ -65,7 +61,7 @@ Try it out here: [Live](https://bibekkakati.github.io/qr-gen/).
 
 ![Demo Image](https://cdn.hashnode.com/res/hashnode/image/upload/v1620586396838/PuSFQynUo.jpeg)
 
-*Screenshot taken from Google Lens while scanning.*
+*Screenshot is taken from Google Lens while scanning.*
 
 ---
 
