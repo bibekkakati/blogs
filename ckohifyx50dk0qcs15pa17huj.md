@@ -53,7 +53,7 @@ var QR_CODE = new QRCode("qrcode", {
 Generate QRCode by calling the `makeCode` method of the QRCode object, which expects the `data` as its argument.
 
 ```javascript
-QR_CODE.makeCode("https://blog.bibekkakati.me");
+QR_CODE.makeCode("https://buymeacoffee.com/bibekkakati");
 ```
 > It will automatically insert the generated QRCode in the `div` whose `id` has been provided while creating the QRCode object.
 
