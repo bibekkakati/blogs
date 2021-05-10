@@ -23,15 +23,12 @@ Include the `html2canvas.min.js` file in your HTML file.
 Now we will use the `html2canvas` method to capture the screenshot of our web page or the HTML element.
 
 ```javascript
-// Pass the HTML element whose screenshot you want
 html2canvas(document.getElementById("main"), {
-  letterRendering: 1,
   allowTaint: true,
   useCORS: true,
 })
 .then(function (canvas) {
   // It will return a canvas element
-  // Converting the canvas to base64 image url
   let image = canvas.toDataURL("image/png", 0.5);
 })
 .catch((e) => {
@@ -39,7 +36,15 @@ html2canvas(document.getElementById("main"), {
   console.log(e);
 });
 ```
-`toDataUrl` method expects two arguments
+`html2canvas` method takes two arguments
+- First is the HTML element whose screenshot you want.
+- Second is a configuration object.
+
+In `configuration object` we using
+- `allowTaint` to allow cross-origin images to taint the canvas.
+- `useCORS` to attempt to load images from a server using CORS.
+
+Converting the returned`canvas` into base64 image URL using `toDataUrl` method which expects two arguments
 - `type` : image format.
 - `encodingOptions` : number between 0 and 1 indicating the image quality.
 
