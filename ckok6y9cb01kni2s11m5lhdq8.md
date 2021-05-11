@@ -29,7 +29,7 @@ Suppose you are creating a banking account, then you can use `username+bank@gmai
 
 It is also useful to track down any compromised accounts and spammers.
 
-*`Some website does not accept this format of mail address or they just trim it down.`*
+*`Some websites do not accept this format of mail address or they just trim it down.`*
 
 ---
 
