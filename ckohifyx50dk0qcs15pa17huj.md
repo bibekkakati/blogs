@@ -65,6 +65,11 @@ Try it out here: [Live](https://bibekkakati.github.io/qr-gen/).
 
 ---
 
-Enjoyed? Give it a thumbs-up 👍
 
-Thank you for reading | Feel free to [connect](https://bibekkakati.me) 👋
+Thank you for reading 🙏
+
+If you enjoyed this article or found it helpful, give it a thumbs-up 👍
+
+Feel free to connect 👋
+
+[Twitter](https://twitter.com/kakatibibek) | [Instagram](https://instagram.com/bibekkakati) | [LinkedIn](https://linkedin.com/in/bibekkakati)
