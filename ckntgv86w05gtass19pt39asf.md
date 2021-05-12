@@ -266,8 +266,16 @@ class LocalNotificationHelper {
 We can do a lot more with the properties of notification like showing media, pictures etc.
 
 I have personally used this local push notification in some of my apps and I must say it works perfectly well. Scheduled Notification is fast and reliable but there are some caveats, you can read it  [here](https://pub.dev/packages/flutter_local_notifications#-caveats-and-limitations).
+
 > Haven't tested with iOS device.
 
-Thank you for reading. Give it a thumbs-up if it is helpful for you.
+---
 
-Feel free to  [connect](https://bibekkakati.me) 👋
+
+Thank you for reading 🙏
+
+If you enjoyed this article or found it helpful, give it a thumbs-up 👍
+
+Feel free to connect 👋
+
+[Twitter](https://twitter.com/kakatibibek) | [Instagram](https://instagram.com/bibekkakati) | [LinkedIn](https://linkedin.com/in/bibekkakati)
