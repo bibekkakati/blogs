@@ -52,4 +52,6 @@ Thank you for reading 🙏
 
 If you enjoyed this article or found it helpful, give it a thumbs-up 👍
 
-Feel free to connect with me on [Twitter](https://twitter.com/kakatibibek) | [Instagram](https://instagram.com/bibekkakati) | [LinkedIn](https://linkedin.com/in/bibekkakati) 👋
+Feel free to connect 👋
+
+[Twitter](https://twitter.com/kakatibibek) | [Instagram](https://instagram.com/bibekkakati) | [LinkedIn](https://linkedin.com/in/bibekkakati)
