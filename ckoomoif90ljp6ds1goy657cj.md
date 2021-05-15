@@ -2,7 +2,7 @@
 
 Hello everyone👋
 
-In this article, I will try to explain the behaviour of the `boolean` data type of JavaScript.
+In this article, I will try to explain a behaviour of the `boolean` data type of JavaScript.
 
 We often use `if` statements in JavaScript to check if a value, that can be of any data type is `true` or `false`. But do you know that these values are not really `true` or `false`, rather they are considered as `truthy` or `falsy` values?
 
