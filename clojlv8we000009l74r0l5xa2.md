@@ -38,6 +38,30 @@ CoderKit is not just about tools; it's about coding with confidence. We're here 
 
 Come, and explore CoderKit Beta with us. Try out the tools, and share your thoughts. Let's make coding a bit more exciting.
 
+🔧 **Meet the Tools**
+
+- JSON Formatter: Tame unruly JSON data with ease, ensuring readability and error-free code.
+
+- Text Case Converter: Convert text between various cases (e.g., CamelCase, snake_case) effortlessly.
+
+- JavaScript Minifier: Reduce file size and boost website performance by minifying your JavaScript code.
+
+- HTML Minifier: Optimize your HTML code for faster loading times and improved user experience.
+
+- CSS Minifier: Streamline your stylesheets to enhance website performance.
+
+- JavaScript Beautifier: Make your JavaScript code more readable and consistent.
+
+- HTML Beautifier: Elevate the aesthetics of your HTML code for better readability.
+
+- CSS Beautifier: Improve the structure and presentation of your CSS styles.
+
+- Base64 Encoder/Decoder: Encode and decode data with this versatile utility.
+
+- JWT Decoder: Decode JSON Web Tokens to inspect and verify their content.
+
+- Lorem Ipsum Generator: Generate placeholder text for content drafting and design prototyping.
+
 👉 **Get Started**
 
 Visit [**coderkit.dev**](https://bit.ly/3QIEC2J) and see how CoderKit can simplify your coding journey. Welcome to a world where coding just got a whole lot easier.
