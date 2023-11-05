@@ -64,6 +64,6 @@ Come, and explore CoderKit Beta with us. Try out the tools, and share your thoug
 
 👉 **Get Started**
 
-Visit [**coderkit.dev**](https://bit.ly/3QIEC2J) and see how CoderKit can simplify your coding journey. Welcome to a world where coding just got a whole lot easier.
+Visit [**coderkit.dev**](https://coderkit.dev) and see how CoderKit can simplify your coding journey. Welcome to a world where coding just got a whole lot easier.
 
 Here's to coding adventures with CoderKit! 🎉
